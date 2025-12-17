@@ -49,6 +49,20 @@ This project answers real-world business questions such as:
 CREATE DATABASE jaydb;
 USE jaydb;
 
+CREATE TABLE album1 (
+  album_id INT PRIMARY KEY,
+  title VARCHAR(255),
+  artist_id INT
+);
+
+LOAD DATA INFILE 'path_to_csv/Album1.csv'
+INTO TABLE album1
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
 
 
 
